@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :reviews, except: [:new, :edit]
+  resources :posts, except: [:new, :edit]
   resources :examples, except: [:new, :edit]
   post '/sign-up' => 'users#signup'
   post '/sign-in' => 'users#signin'
