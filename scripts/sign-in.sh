@@ -8,4 +8,4 @@ curl --include --request POST http://localhost:3000/sign-in \
       "password": "super sekrit"
     }
   }'
-#BAhJIiVlNmY2MWY4MTk0NWU1NjFlY2QyYjA3OWMzM2VhYTllNAY6BkVG--8896cf2b7959731a4eadccf2c9672ca55f30ab37
+#BAhJIiVmY2I3NWYzOTY1NGY2YTdkZDk4M2Q5OWU1MGM0MmI2YwY6BkVG--6ef151a85b55f30dba7f1b1c62fd46f707a2d798
