@@ -21,7 +21,7 @@ class ReviewsController < OpenReadController
     @review = Review.new(review_params)
 
     if @review.save
-      render json: @review, status: :created, location: @review
+      render json: @review, status: :created #, location: @review
     else
       render json: @review.errors, status: :unprocessable_entity
     end
@@ -54,6 +54,6 @@ class ReviewsController < OpenReadController
     end
 
     def review_params
-      params.require(:review).permit(:rating, :comment, :posts_id)
+      params.require(:review).permit(:rating, :comment, :post_id)
     end
 end
