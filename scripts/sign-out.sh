@@ -1,4 +1,4 @@
 #!/bin/bash
 
-curl --include --request DELETE http://localhost:3000/sign-out/1 \
-  --header "Authorization: Token token=BAhJIiU1MDQ1NWNhZTdkYTQzMDk0MzcyYmRlMjQ3Y2UwNjE3NgY6BkVG--fd74c2f53a44de3d35924c4b8f98d06efbc7f1b6"
+curl --include --request DELETE http://localhost:3000/sign-out/3 \
+  --header "Authorization: Token token=BAhJIiVlYjQ4MDQ1MjJmYWI1MWQ0OWE3ZDc2ZDJmNWM4MjgxMQY6BkVG--6ff29fc5fe4ad6fd94a3226605127e85a90f59fe"

@@ -18,10 +18,11 @@ class ReviewsController < OpenReadController
   # POST /reviews
   # POST /reviews.json
   def create
-    @review = Review.new(review_params)
+    #@review = Review.new(review_params)
+    @review = current_user.reviews.new(review_params)
 
     if @review.save
-      render json: @review, status: :created #, location: @review
+      render json: @review, status: :created , location: @review
     else
       render json: @review.errors, status: :unprocessable_entity
     end
@@ -30,7 +31,8 @@ class ReviewsController < OpenReadController
   # PATCH/PUT /reviews/1
   # PATCH/PUT /reviews/1.json
   def update
-    @review = Review.find(params[:id])
+    #@review = Review.find(params[:id])
+    @review = current_user.reviews.find(params[:id])
 
     if @review.update(review_params)
       head :no_content
