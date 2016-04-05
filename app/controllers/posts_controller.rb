@@ -18,21 +18,26 @@ class PostsController < OpenReadController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(post_params)
+    if current_user.admin?
+      @post = current_user.posts.new(post_params)
+      @post.user_id = current_user.id
 
-    if @post.save
-      render json: @post, status: :created, location: @post
-    else
-      render json: @post.errors, status: :unprocessable_entity
+      if @post.save
+        render json: @post, status: :created, location: @post
+      else
+        render json: @post.errors, status: :unprocessable_entity
+      end
+
     end
   end
 
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
-    @post = Post.find(params[:id])
-
-    if @post.update(post_params)
+    if current_user.admin?
+      #@post = Post.find(params[:id])
+      @post = current_user.posts.find(params[:id])
+      @post.update(post_params)
       head :no_content
     else
       render json: @post.errors, status: :unprocessable_entity
@@ -42,18 +47,21 @@ class PostsController < OpenReadController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
-    @post.destroy
-
-    head :no_content
+    if current_user.admin? && @post.user_id = current_user.id
+      @post.destroy
+      head :no_content
+    else
+      render json: @post.errors, status: :unprocessable_entity
+    end
   end
 
   private
 
-    def set_post
-      @post = Post.find(params[:id])
-    end
+  def set_post
+    @post = Post.find(params[:id])
+  end
 
-    def post_params
-      params.require(:post).permit(:title, :description)
-    end
+  def post_params
+    params.require(:post).permit(:title, :description)
+  end
 end

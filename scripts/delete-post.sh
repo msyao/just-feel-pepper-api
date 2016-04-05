@@ -1,2 +1,2 @@
-curl --include --request DELETE http://localhost:3000/posts/3 \
-  --header "Authorization: Token token=BAhJIiVmY2I3NWYzOTY1NGY2YTdkZDk4M2Q5OWU1MGM0MmI2YwY6BkVG--6ef151a85b55f30dba7f1b1c62fd46f707a2d798"
+curl --include --request DELETE http://localhost:3000/posts/6 \
+  --header "Authorization: Token token=BAhJIiU1NTdjNjhiMGYwYmEzYmNhMzlmN2JjMGY1ODZhYTUzYgY6BkVG--4cb581bdd298e8fb1b3665232c438310dc727337"
