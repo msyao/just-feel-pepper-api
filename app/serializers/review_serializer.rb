@@ -1,4 +1,3 @@
 class ReviewSerializer < ActiveModel::Serializer
-  attributes :id, :rating, :comment
-  has_one :post
+  attributes :id, :rating, :comment, :post_id
 end

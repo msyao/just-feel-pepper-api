@@ -1,11 +1,11 @@
 #!/bin/bash
 
-curl --include --request POST http://localhost:3000/posts \
-  --header "Authorization: Token token=BAhJIiU0NTY1Mjc0MmI3OGNkMDU5MTM4YjdhNjQyNzA0OTNkYwY6BkVG--ca5d864eca3755ce2500b3a42a2cc346d42b8ece" \
+curl --include --request POST http://localhost:3000/posts/16 \
+  --header "Authorization: Token token=BAhJIiVjNmU2ZjQyNDFhNzMzMGRiYTA1M2NhODUzOTFkZTVkNwY6BkVG--47f9c0c81484d99484e9a89f38affb0b5c59141b" \
   --header "Content-Type: application/json" \
   --data '{
     "post": {
-      "title": "regular user truth - huh?? try hard bbeeetch",
+      "title": "thursday",
       "description": "yah?",
       "website": "does u show??"
     }

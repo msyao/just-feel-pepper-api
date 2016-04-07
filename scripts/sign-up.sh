@@ -5,8 +5,8 @@ curl --include --request POST http://localhost:3000/sign-up \
   --data '{
     "credentials": {
       "email": "seatuna@example.email",
-      "password": "an example password",
-      "password_confirmation": "an example password"
+      "password": "lol",
+      "password_confirmation": "lol"
     }
   }'
 
