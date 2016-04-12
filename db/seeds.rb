@@ -8,3 +8,8 @@
 
 User.create!(email: 'yaoza@lol.com', password: 'lol', admin: true)
 User.create!(email: 'yaokuza@lol.com', password: 'lol', admin: true)
+
+
+Post.create!([{ title: 'Carolina Reaper', description: "It is, to date, the world’s hottest hybrid pepper.", website: "https://www.cayennediane.com/peppers/carolina-reaper/"},
+  {title: "Trinidad Moruga Scorpion", description: "The Trinidad moruga scorpion is native to the district of Moruga in Trinidad and Tobago.", website:"https://www.cayennediane.com/peppers/trinidad-moruga-scorpion/"},
+  {title: "Bhut Jolokia Chocolate", description: "Typical Heat Rating in Scovilles 800000 - 1001304", website:"https://www.cayennediane.com/peppers/bhut-jolokia-chocolate/"}])
