@@ -31,7 +31,7 @@ This web app allows logged-in users to post rating and reviews on peppers.
 -   Axure
 
 ##Deployed front end link
-Please [Just Feel Pepper]().
+Please [Just Feel Pepper](https://github.com/msyao/just-feel-pepper-client).
 
 ##Capstone front end repo
 [Just Feel Pepper Front End](https://github.com/msyao/just-feel-pepper-client).
